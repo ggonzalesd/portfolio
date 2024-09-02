@@ -1,1 +1,0 @@
-import{j as t,A as e,c as r,r as o}from"./index-BbLg_Ml0.js";function s(){return t.jsx(e,{children:t.jsx("span",{children:"About Page"})})}r(document.getElementById("root")).render(t.jsx(o.StrictMode,{children:t.jsx(s,{})}));
