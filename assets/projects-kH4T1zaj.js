@@ -1,0 +1,1 @@
+import{j as e,A as t,c as r,r as o}from"./index-BbLg_Ml0.js";function s(){return e.jsx(t,{children:e.jsx("span",{children:"Projects Page"})})}r(document.getElementById("root")).render(e.jsx(o.StrictMode,{children:e.jsx(s,{})}));
