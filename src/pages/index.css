@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  src: url('/font/PixeloidMono-d94EV.ttf') format('truetype');
+  font-family: 'PixeloidMono';
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  src: url('/font/PixeloidSans-mLxMm.ttf') format('truetype');
+  font-family: 'PixeloidSans';
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: bold;
+  src: url('/font/PixeloidSansBold-PKnYd.ttf') format('truetype');
+  font-family: 'PixeloidSansBold';
+}
+
+/* Aplica la fuente a todos los elementos */
+@layer base {
+  body {
+    @apply font-pixeloidsans; /* Cambia esto por la fuente que quieras aplicar por defecto */
+  }
+}
