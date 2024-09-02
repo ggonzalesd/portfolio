@@ -4,8 +4,8 @@ interface Props {
 
 export default function Section({ children }: Props) {
   return (
-    <section>
-      <div>{children}</div>
+    <section className='w-full'>
+      <div className='mx-auto w-full max-w-screen-lg'>{children}</div>
     </section>
   );
 }
