@@ -1,6 +1,8 @@
-import Header from '@/components/header';
-import { useTypedTranslation } from '@/hooks';
 import React, { useEffect } from 'react';
+import { useTypedTranslation } from '@/hooks';
+
+import Footer from '@/components/footer';
+import Header from '@/components/header';
 
 interface Props {
   children?: React.ReactNode;
@@ -19,9 +21,10 @@ export default function AppLayout({ children }: Props) {
   }, []);
 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-[#8af] to-[#fad] pt-12'>
+    <div className='flex min-h-screen flex-col justify-between bg-gradient-to-br from-[#8af] to-[#fad] pt-12'>
       <Header />
-      <main>{children}</main>
+      <main className='flex-grow'>{children}</main>
+      <Footer />
     </div>
   );
 }
