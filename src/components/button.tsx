@@ -32,12 +32,13 @@ export default function Button({
 
 const buttonStyle = {
   default:
-    'outline-none rounded-md px-2 py-1 duration-200 disabled:text-zinc-700 disabled:cursor-not-allowed leading-5',
+    'outline-none px-2 py-1 duration-200 disabled:text-zinc-700 disabled:cursor-not-allowed leading-5',
   variant: {
+    old: 'border-b-2 border-l-2 border-r-2 border-t-2 border-b-zinc-700 border-l-zinc-100 border-r-zinc-700 border-t-zinc-100 bg-zinc-300 p-1 leading-3 hover:bg-zinc-400 active:bg-zinc-50',
     outline:
       'bg-transparent hover:bg-zinc-800/20 active:bg-zinc-800/60 border-2 border-zinc-400 disabled:border-zinc-700 disabled:bg-transparent font-bold text-zinc-200',
     solid:
-      'bg-zinc-800 disabled:bg-zinc-800 active:bg-zinc-500 font-bold text-zinc-200 hover:bg-zinc-700',
+      'bg-zinc-800 disabled:bg-zinc-800 active:bg-zinc-500 font-bold text-zinc-200 hover:bg-zinc-700 rounded-md',
     text: 'bg-transparent text-white font-bold active:bg-zinc-400/10 disabled:bg-transparent',
   },
 };
