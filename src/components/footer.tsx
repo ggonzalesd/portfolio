@@ -3,14 +3,17 @@ import cn from 'classnames';
 import Button from './button';
 
 import { IoCloseSharp } from 'react-icons/io5';
+import { useTypedTranslation } from '@/hooks';
 
 export default function Footer() {
+  const t = useTypedTranslation();
+
   const [open, setOpen] = useState(true);
 
   return (
     <footer className='mt-4 flex flex-col border-4'>
       <div className='flex items-center justify-between bg-gradient-to-r from-[#8af] to-[#f8d]'>
-        <span className='px-2'>Footer</span>
+        <span className='px-2'>{t.text('app.footer.title')}</span>
         <Button variant='old' onClick={() => setOpen((value) => !value)}>
           <IoCloseSharp size={24} />
         </Button>

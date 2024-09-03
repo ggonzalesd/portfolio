@@ -1,0 +1,14 @@
+.Home_SkillLogoSlide {
+  display: inline-block;
+  animation: 20s animate-home_skilllogo linear infinite;
+  min-width: max-content;
+}
+
+@keyframes animate-home_skilllogo {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
