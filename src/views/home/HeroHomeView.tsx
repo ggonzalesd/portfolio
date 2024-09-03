@@ -2,15 +2,17 @@ import cn from 'classnames';
 import { useTypedTranslation } from '@/hooks';
 
 import Section from '@/components/section';
-import Button, { buttonStyleGenerator } from '@/components/button';
+import { buttonStyleGenerator } from '@/components/button';
+import InfosTag from '@/components/home/infostag';
+
+import { MdMail } from 'react-icons/md';
+import { BiPhone } from 'react-icons/bi';
+import { BsGithub, BsLinkedin } from 'react-icons/bs';
 
 import images from '@/assets/photos';
 import styles from './Home.module.css';
-import { MdEmail } from 'react-icons/md';
-import { BiPhone } from 'react-icons/bi';
-import { BsGithub, BsLinkedin } from 'react-icons/bs';
-import { FaExternalLinkAlt } from 'react-icons/fa';
-import { FaCopy } from 'react-icons/fa';
+import { IconType } from 'react-icons';
+import { FaFilePdf } from 'react-icons/fa';
 
 export default function HeroHomeView() {
   const t = useTypedTranslation();
@@ -18,7 +20,7 @@ export default function HeroHomeView() {
   return (
     <Section className='grid grid-cols-1 gap-4 py-2 sm:grid-cols-2'>
       <div className='flex items-center justify-center'>
-        <div
+        <picture
           className={cn(
             'z-[1] flex flex-col border-4 bg-zinc-300 shadow-md shadow-black/40',
             styles.Home_HeroImage,
@@ -37,8 +39,9 @@ export default function HeroHomeView() {
             Grober Gonzales
           </span>
           <span className='px-4 py-2'>FullStack - Developer</span>
-        </div>
+        </picture>
       </div>
+
       <div className='z-[1] flex flex-col items-center justify-center sm:items-start'>
         <div className='px-6 sm:px-0'>
           <h2 className='text-center text-xl sm:text-start'>
@@ -49,60 +52,55 @@ export default function HeroHomeView() {
           </p>
         </div>
         <div className='my-2 flex flex-col gap-2'>
-          <div className='flex items-center bg-zinc-300'>
-            <Button variant='old'>
-              <MdEmail size={24} />
-            </Button>
-            <span className='flex-grow px-2 text-blue-700'>
-              grober_gonzales@hotmail.com
-            </span>
-            <Button variant='old'>
-              <FaCopy size={24} />
-            </Button>
-          </div>
-          <div className='flex items-center bg-zinc-300'>
-            <Button variant='old'>
-              <BiPhone size={24} />
-            </Button>
-            <span className='flex-grow text-nowrap px-2 text-blue-700'>
-              +51 946 814 055
-            </span>
-            <Button variant='old'>
-              <FaCopy size={24} />
-            </Button>
-          </div>
-          <div className='flex items-center bg-zinc-300'>
-            <Button variant='old'>
-              <BsLinkedin size={24} />
-            </Button>
-            <span className='flex-grow text-nowrap px-2 text-blue-700'>
-              gegonzalesd
-            </span>
-            <a
-              href='https://linkedin.com/in/gegonzalesd'
-              target='_blank'
-              className={buttonStyleGenerator({ variant: 'old' })}
-            >
-              <FaExternalLinkAlt size={24} />
-            </a>
-          </div>
-          <div className='flex items-center bg-zinc-300'>
-            <Button variant='old'>
-              <BsGithub size={24} />
-            </Button>
-            <span className='flex-grow text-nowrap px-2 text-blue-700'>
-              ggonzalesd
-            </span>
-            <a
-              href='https://github.com/ggonzalesd'
-              target='_blank'
-              className={buttonStyleGenerator({ variant: 'old' })}
-            >
-              <FaExternalLinkAlt size={24} />
-            </a>
-          </div>
+          {tags.map(({ icon, action, display, value }) => (
+            <InfosTag
+              key={value}
+              Icon={icon}
+              display={display}
+              value={value}
+              action={action}
+            />
+          ))}
         </div>
       </div>
     </Section>
   );
 }
+
+const tags: {
+  icon: IconType;
+  display: string;
+  value: string;
+  action: 'LINK' | 'COPY';
+}[] = [
+  {
+    icon: MdMail,
+    display: 'grober_gonzales@hotmail.com',
+    value: 'grober_gonzales@hotmail.com',
+    action: 'COPY',
+  },
+  {
+    icon: BiPhone,
+    display: '+51 946 814 055',
+    value: '+51 946 814 055',
+    action: 'COPY',
+  },
+  {
+    icon: BsLinkedin,
+    display: 'gegonzalesd',
+    value: 'https://linkedin.com/in/gegonzalesd',
+    action: 'LINK',
+  },
+  {
+    icon: BsGithub,
+    display: 'ggonzalesd',
+    value: 'https://github.com/ggonzalesd',
+    action: 'LINK',
+  },
+  {
+    icon: FaFilePdf,
+    display: 'Curriculum Vitae',
+    value: import.meta.env.BASE_URL + '/download/fullstack-grober_gonzales.pdf',
+    action: 'LINK',
+  },
+];

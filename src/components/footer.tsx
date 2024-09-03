@@ -8,22 +8,21 @@ export default function Footer() {
   const [open, setOpen] = useState(true);
 
   return (
-    <footer className=''>
-      <div className='flex justify-end'>
-        <Button
-          variant='old'
-          className='bg-red-600 hover:bg-red-500 active:bg-red-400'
-          onClick={() => setOpen((value) => !value)}
-        >
-          <IoCloseSharp size={24} className='text-white' />
+    <footer className='mt-4 flex flex-col border-4'>
+      <div className='flex items-center justify-between bg-gradient-to-r from-[#8af] to-[#f8d]'>
+        <span className='px-2'>Footer</span>
+        <Button variant='old' onClick={() => setOpen((value) => !value)}>
+          <IoCloseSharp size={24} />
         </Button>
       </div>
       <section
         className={cn(
-          'h-20 w-full bg-zinc-300 duration-150',
-          open ? 'max-h-max' : 'max-h-0',
+          'flex w-full origin-bottom flex-col bg-zinc-300 py-4 transition-all duration-150',
+          open ? 'visible' : 'hidden',
         )}
-      ></section>
+      >
+        <span className='mx-auto text-center'>Grober Gonzales - 2024</span>
+      </section>
     </footer>
   );
 }

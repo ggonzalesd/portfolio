@@ -48,8 +48,8 @@ export const buttonStyleGenerator = (config?: {
   variant?: keyof typeof buttonStyle.variant;
 }) => {
   return cn(
-    buttonStyle.default,
-    buttonStyle.variant[config?.variant ?? 'outline'],
     config?.className,
+    buttonStyle.default,
+    buttonStyle.variant[config?.variant ?? 'old'],
   );
 };
