@@ -1,14 +1,19 @@
 import Header from '@/components/header';
+import { useTypedTranslation } from '@/hooks';
 import React, { useEffect } from 'react';
 
 interface Props {
   children?: React.ReactNode;
 }
 
+const queries = new URLSearchParams(window.location.search);
+
 export default function AppLayout({ children }: Props) {
+  const t = useTypedTranslation();
+
   useEffect(() => {
-    const queries = new URLSearchParams(window.location.search);
-    // console.log(navigator.language);
+    const lang = queries.get('lang') ?? 'en';
+    t.change(lang);
     queries.set('lang', queries.get('lang') ?? 'en');
     history.pushState({}, '', `${window.location.pathname}?${queries}`);
   }, []);

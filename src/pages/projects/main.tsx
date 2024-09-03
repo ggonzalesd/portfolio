@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 
 import Page from './page.tsx';
 
+import '@/locale';
 import '@/pages/index.css';
 
 createRoot(document.getElementById('root')!).render(

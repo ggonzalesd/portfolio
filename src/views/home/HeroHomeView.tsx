@@ -6,8 +6,11 @@ import { buttonStyleGenerator } from '@/components/button';
 import images from '@/assets/photos';
 
 import styles from './Home.module.css';
+import { useTypedTranslation } from '@/hooks';
 
 export default function HeroHomeView() {
+  const t = useTypedTranslation();
+
   return (
     <Section className='grid grid-cols-1 py-2 sm:grid-cols-2'>
       <div className='flex items-center justify-center'>
@@ -33,7 +36,12 @@ export default function HeroHomeView() {
         </div>
       </div>
       <div>
-        <span>Container</span>
+        <h2 className='text-xl'>{t.text('home.hero.description.title')}</h2>
+        <div>
+          <p className='text-xs leading-6'>
+            {t.text('home.hero.description.content')}
+          </p>
+        </div>
       </div>
     </Section>
   );

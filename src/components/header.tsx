@@ -1,11 +1,12 @@
 import { useCallback, useMemo, useState } from 'react';
 import cn from 'classnames';
+import { LangKey } from '@/locale/en';
+import { useTypedTranslation } from '@/hooks';
 
 import Button, { buttonStyleGenerator } from './button';
 
 import { IoMdArrowRoundForward } from 'react-icons/io';
 import { RiPlanetFill } from 'react-icons/ri';
-
 import { GoDotFill } from 'react-icons/go';
 
 const base = import.meta.env.BASE_URL;
@@ -22,9 +23,10 @@ export default function Header() {
   );
 
   const [open, setOpen] = useState(false);
+  const t = useTypedTranslation();
 
   return (
-    <header className='fixed left-0 top-0 h-12 w-full'>
+    <header className='fixed left-0 top-0 z-10 h-12 w-full'>
       <div className='mx-auto flex h-full max-w-screen-lg items-center justify-between border-4 bg-gradient-to-r from-[#8af] to-[#f8d]'>
         <Button
           variant='old'
@@ -49,7 +51,7 @@ export default function Header() {
                   className: 'text-nowrap py-4',
                 })}
               >
-                {display}
+                {t.text(display)}
               </a>
             ))}
           </div>
@@ -72,7 +74,7 @@ export default function Header() {
               ) : (
                 <GoDotFill />
               )}
-              <span className='text-black'>{display}</span>
+              <span className='text-black'>{t.text(display)}</span>
             </a>
           ))}
         </nav>
@@ -81,17 +83,17 @@ export default function Header() {
   );
 }
 
-const routers: { path: string; display: string }[] = [
+const routers: { path: string; display: LangKey }[] = [
   {
     path: '/',
-    display: 'Main',
+    display: 'app.header.route-01.display',
   },
   {
     path: '/about/',
-    display: 'About me',
+    display: 'app.header.route-02.display',
   },
   {
     path: '/projects/',
-    display: 'Projects',
+    display: 'app.header.route-03.display',
   },
 ];
