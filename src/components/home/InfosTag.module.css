@@ -1,0 +1,18 @@
+.InfosTagPdf {
+  transform: scale(25%);
+  transform-origin: top center;
+  opacity: 0.25;
+  animation: 400ms animate-home_infostagpdf forwards
+    cubic-bezier(0.49, 1.77, 0.14, 0.76);
+}
+
+@keyframes animate-home_infostagpdf {
+  from {
+    transform: scale(25%);
+    opacity: 0.25;
+  }
+  to {
+    transform: scale(100%);
+    opacity: 1;
+  }
+}

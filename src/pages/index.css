@@ -23,9 +23,8 @@
   font-family: 'PixeloidSansBold';
 }
 
-/* Aplica la fuente a todos los elementos */
 @layer base {
   body {
-    @apply font-pixeloidsans; /* Cambia esto por la fuente que quieras aplicar por defecto */
+    @apply font-pixeloidsans;
   }
 }

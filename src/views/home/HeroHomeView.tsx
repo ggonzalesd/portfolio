@@ -8,11 +8,11 @@ import InfosTag from '@/components/home/infostag';
 import { MdMail } from 'react-icons/md';
 import { BiPhone } from 'react-icons/bi';
 import { BsGithub, BsLinkedin } from 'react-icons/bs';
+import { IconType } from 'react-icons';
+import { FaFilePdf } from 'react-icons/fa';
 
 import images from '@/assets/photos';
 import styles from './Home.module.css';
-import { IconType } from 'react-icons';
-import { FaFilePdf } from 'react-icons/fa';
 
 export default function HeroHomeView() {
   const t = useTypedTranslation();
@@ -71,7 +71,7 @@ const tags: {
   icon: IconType;
   display: string;
   value: string;
-  action: 'LINK' | 'COPY';
+  action: 'LINK' | 'COPY' | 'EMBED';
 }[] = [
   {
     icon: MdMail,
@@ -101,6 +101,6 @@ const tags: {
     icon: FaFilePdf,
     display: 'Curriculum Vitae',
     value: import.meta.env.BASE_URL + '/download/fullstack-grober_gonzales.pdf',
-    action: 'LINK',
+    action: 'EMBED',
   },
 ];

@@ -23,7 +23,7 @@ export default function AppLayout({ children }: Props) {
   return (
     <div className='flex min-h-screen flex-col justify-between bg-gradient-to-br from-[#8af] to-[#fad] pt-12'>
       <Header />
-      <main className='flex-grow'>{children}</main>
+      <main className='flex flex-grow flex-col gap-8'>{children}</main>
       <Footer />
     </div>
   );

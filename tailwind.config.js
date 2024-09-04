@@ -8,6 +8,10 @@ export default {
         pixeloidsans: ['PixeloidSans', 'sans-serif'],
         pixeloidsansbold: ['PixeloidSansBold', 'sans-serif'],
       },
+      colors: {
+        primary: '#fad',
+        secondary: '#8af',
+      },
     },
   },
   plugins: [],
