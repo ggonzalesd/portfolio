@@ -1,6 +1,7 @@
 import GridDec from '@/components/shared/GridDec';
 import AppLayout from '@/layouts/AppLayout';
 import HeroHomeView from '@/views/home/HeroHomeView';
+import JobsHomeView from '@/views/home/JobsHomeView';
 import StackHomeView from '@/views/home/StackHomeView';
 
 export default function HomePage() {
@@ -14,6 +15,7 @@ export default function HomePage() {
         <GridDec className='absolute bottom-0 left-0' />
       </div>
       <StackHomeView />
+      <JobsHomeView />
     </AppLayout>
   );
 }
