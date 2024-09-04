@@ -1,5 +1,6 @@
 import Button from '@/components/button';
 import Section from '@/components/section';
+import Loading from '@/components/shared/loading';
 import { useTypedTranslation } from '@/hooks';
 import React, { Suspense } from 'react';
 
@@ -15,7 +16,7 @@ export default function StackHomeView() {
           <span className='px-2'>{t.text('home.skills.title')}</span>
           <Button disabled>X</Button>
         </div>
-        <Suspense fallback='Loading...'>
+        <Suspense fallback={<Loading />}>
           <Skills />
         </Suspense>
       </div>
