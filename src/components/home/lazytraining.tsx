@@ -1,15 +1,12 @@
-import { AiOutlineFile } from 'react-icons/ai';
+import FileTraining from './filetraining';
 
 export default function LazyTraining() {
   return (
     <div className='flex justify-center px-4'>
-      <div className='flex flex-wrap justify-start gap-4'>
-        {[...new Uint8Array(12)].map((_, index) => (
+      <div className='grid grid-cols-2 gap-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8'>
+        {[...new Uint8Array(1)].map((_, index) => (
           <div key={index}>
-            <picture className='group flex flex-col items-center border-4 border-transparent p-2 hover:cursor-pointer hover:border-white active:bg-sky-400/50'>
-              <AiOutlineFile size={96} className='text-white' />
-              <span className='select-none'>File</span>
-            </picture>
+            <FileTraining />
           </div>
         ))}
       </div>
