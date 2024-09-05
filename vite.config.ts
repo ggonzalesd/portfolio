@@ -15,6 +15,8 @@ export default defineConfig(({ mode }) => ({
   build: {
     outDir,
     emptyOutDir: true,
+    assetsInlineLimit: 0,
+    cssCodeSplit: true,
     rollupOptions: {
       input: {
         main: resolve(root, 'index.html'),

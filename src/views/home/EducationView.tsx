@@ -8,7 +8,7 @@ const LazyTraining = React.lazy(() => import('@/components/home/lazytraining'));
 export default function EducationView() {
   return (
     <Section>
-      <div className='from-secondary to-primary flex items-center justify-between border-4 bg-gradient-to-r'>
+      <div className='flex items-center justify-between border-4 bg-gradient-to-r from-secondary to-primary'>
         <span className='px-2'>Academic Training</span>
         <Button disabled>X</Button>
       </div>

@@ -15,8 +15,8 @@ export default function LazyJobs() {
         positions={['Fullstack practicante', 'React', 'NestJs', 'PostgreSQL']}
         name='Grupo Agiletech Peru Enterprise Solutions S.A.C'
         technologies={[react, typescript, redux, node_]}
-        start={{ month: 'app.moth.04-april', year: 2024 }}
-        end={{ month: 'app.moth.08-august', year: 2024 }}
+        start={{ month: 'app.month.04-april', year: 2024 }}
+        end={{ month: 'app.month.08-august', year: 2024 }}
         time={5}
         descriptions={[
           'Implementación de landing pages con React, Vite, y Tailwind.',

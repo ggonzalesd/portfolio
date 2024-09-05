@@ -67,7 +67,7 @@ export default function JobCard(props: Props) {
             </span>
             <div className='my-1 hidden w-[2px] bg-zinc-600 sm:visible' />
             <span className={cn('px-1 text-sm italic text-black/75', border)}>
-              {props.time} Meses
+              {props.time} {t.text('app.month.name')}
             </span>
           </div>
         </div>

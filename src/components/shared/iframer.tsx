@@ -6,6 +6,7 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
 import { MdDownload } from 'react-icons/md';
 
 import { useMemo, useState } from 'react';
+import { useTypedTranslation } from '@/hooks';
 
 interface Props {
   frames: {
@@ -25,6 +26,7 @@ export default function IFramer({
   children,
   setOpen,
 }: Props) {
+  const t = useTypedTranslation();
   const [index, setIndex] = useState(0);
   const [status, setStatus] = useState<'LOADING' | 'ERROR' | 'OK'>('LOADING');
 
@@ -56,7 +58,7 @@ export default function IFramer({
         'absolute top-14 flex h-5/6 w-9/12 flex-col border-4 bg-zinc-300 shadow-md shadow-black/80',
       )}
     >
-      <div className='from-primary to-secondary flex items-center justify-between bg-gradient-to-r'>
+      <div className='flex items-center justify-between bg-gradient-to-r from-primary to-secondary'>
         <span className='px-2'>{frame ? frame.display : '[no-content]'}</span>
         <div className='flex'>
           {redirect && (
@@ -69,13 +71,17 @@ export default function IFramer({
               })}
             >
               <FaExternalLinkAlt />
-              <span className='hidden md:inline-block'>Redirect</span>
+              <span className='hidden md:inline-block'>
+                {t.text('app.iframer.redirect')}
+              </span>
             </a>
           )}
           {download && (
             <Button className='flex items-center gap-2' onClick={onDownload}>
               <MdDownload />
-              <span className='hidden md:inline-block'>Download</span>
+              <span className='hidden md:inline-block'>
+                {t.text('app.iframer.download')}
+              </span>
             </Button>
           )}
           <Button onClick={() => setOpen(false)}>X</Button>

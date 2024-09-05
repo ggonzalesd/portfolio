@@ -1,0 +1,15 @@
+.Header_LangButton > span {
+  transform: scaleX(0);
+  transform-origin: right center;
+  opacity: 0;
+  transition: 150ms allow-discrete linear;
+  max-width: 0px;
+  color: transparent;
+}
+
+.Header_LangButton:hover > span {
+  transform: scaleX(100%);
+  opacity: 1;
+  max-width: none;
+  color: black;
+}
