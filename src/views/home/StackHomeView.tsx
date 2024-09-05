@@ -1,8 +1,10 @@
+import React, { Suspense } from 'react';
+
+import { useTypedTranslation } from '@/hooks';
+
 import Button from '@/components/button';
 import Section from '@/components/section';
 import Loading from '@/components/shared/loading';
-import { useTypedTranslation } from '@/hooks';
-import React, { Suspense } from 'react';
 
 const Skills = React.lazy(() => import('@/components/home/skills'));
 

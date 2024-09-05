@@ -16,10 +16,7 @@ const base = import.meta.env.BASE_URL;
 
 export default function Header() {
   const pathname = useMemo(() => window.location.pathname, []);
-  const lang = useMemo(
-    () => new URLSearchParams(window.location.search).get('lang') ?? 'en',
-    [],
-  );
+  const lang = new URLSearchParams(window.location.search).get('lang') ?? 'en';
   const isPathActive = useCallback(
     (path: string) => pathname === path || pathname + '/' === path,
     [pathname],

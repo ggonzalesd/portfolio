@@ -1,9 +1,10 @@
-import Button, { buttonStyleGenerator } from '../button';
+import { useState } from 'react';
+import { IconType } from 'react-icons';
+
 import IFramer from '../shared/iframer';
+import Button, { buttonStyleGenerator } from '../button';
 
 import { FaCopy, FaExternalLinkAlt } from 'react-icons/fa';
-import { IconType } from 'react-icons';
-import { useState } from 'react';
 import { GrView } from 'react-icons/gr';
 
 interface Props {

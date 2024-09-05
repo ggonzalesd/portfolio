@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 
 import style from './loading.module.css';
+
 const dotsStr = '...';
 
 export default function Loading() {

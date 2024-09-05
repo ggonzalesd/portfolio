@@ -9,21 +9,44 @@ import python from './python.svg';
 import react from './react.svg';
 import redux from './redux.svg';
 import typescript from './typescript.svg';
+import emailjs from './emailjs.png';
+import mui from './mui.png';
+import tailwind from './tailwind.svg';
+import nestjs from './nestjs.svg';
+import i18n from './i18next.png';
+import express from './express.png';
+import sequelize from './sequelize.png';
+import typeorm from './typeorm.png';
+import springboot from './spring-boot.png';
+import sqlite from './sqlite.png';
+import zustand from './zustand.ico';
 
-export default [
-  { src: css3, display: 'CSS' },
-  { src: html5, display: 'HTML' },
-  { src: java, display: 'Java' },
-  { src: javascript, display: 'JavasScript' },
-  { src: nodejs, display: 'NodeJS' },
-  { src: npm, display: 'npm' },
-  { src: postgresql, display: 'PostgreSQL' },
-  { src: python, display: 'Python' },
-  { src: react, display: 'React' },
-  { src: redux, display: 'Redux' },
-  { src: typescript, display: 'Typescript' },
-] as {
-  src: string;
-  display: string;
-  tags?: string[];
-}[];
+const data = {
+  html: { src: html5, display: 'HTML' },
+  css: { src: css3, display: 'CSS' },
+  javascript: { src: javascript, display: 'JavasScript' },
+
+  nodejs: { src: nodejs, display: 'NodeJS' },
+  npm: { src: npm, display: 'npm' },
+  typescript: { src: typescript, display: 'Typescript' },
+  react: { src: react, display: 'React' },
+  tailwind: { src: tailwind, display: 'Tailwind' },
+  i18n: { src: i18n, display: 'i18next' },
+  redux: { src: redux, display: 'Redux' },
+  zustand: { src: zustand, display: 'Zustand' },
+  express: { src: express, display: 'ExpressJs' },
+  nestjs: { src: nestjs, display: 'NestJs' },
+  emailjs: { src: emailjs, display: 'Emailjs' },
+
+  mui: { src: mui, display: 'Mui' },
+
+  postgresql: { src: postgresql, display: 'PostgreSQL' },
+  sequelize: { src: sequelize, display: 'Sequelize' },
+  sqlite: { src: sqlite, display: 'SQLite' },
+  typeorm: { src: typeorm, display: 'TypeORM' },
+  java: { src: java, display: 'Java' },
+  springboot: { src: springboot, display: 'Spring Boot' },
+  python: { src: python, display: 'Python' },
+};
+
+export default data;

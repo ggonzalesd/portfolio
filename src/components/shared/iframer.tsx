@@ -1,12 +1,14 @@
+import { useMemo, useState } from 'react';
 import cn from 'classnames';
+
+import { useTypedTranslation } from '@/hooks';
+
 import Button, { buttonStyleGenerator } from '../button';
 import Loading from './loading';
 import Error from './error';
+
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import { MdDownload } from 'react-icons/md';
-
-import { useMemo, useState } from 'react';
-import { useTypedTranslation } from '@/hooks';
 
 interface Props {
   frames: {
@@ -84,7 +86,9 @@ export default function IFramer({
               </span>
             </Button>
           )}
-          <Button onClick={() => setOpen(false)}>X</Button>
+          <Button variant='gold' onClick={() => setOpen(false)}>
+            X
+          </Button>
         </div>
       </div>
       {children}
