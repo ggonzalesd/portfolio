@@ -27,14 +27,21 @@ export default function JobCard(props: Props) {
   const t = useTypedTranslation();
 
   return (
-    <div className='flex flex-col border-[1px] border-black/25 p-2'>
+    <div
+      className={cn(
+        'flex flex-col border-[1px] p-2',
+        'border-black/25',
+        'dark:border-cyan/40 dark:bg-primarydark/30 dark:rounded-md',
+      )}
+    >
       <div className='flex gap-2'>
         <picture className='hidden sm:flex'>
           <img
             src={props.src}
             className={cn(
-              border,
               'aspect-square h-24 w-24 border-t-2 object-contain',
+              border,
+              'dark:border-cyan/70 dark:rounded-md',
             )}
           />
         </picture>
@@ -44,8 +51,9 @@ export default function JobCard(props: Props) {
               <span
                 key={text}
                 className={cn(
-                  'bg-gradient-to-r from-[#8af] to-[#fad] px-1 text-sm text-black/75',
+                  'bg-gradient-to-r from-secondary to-primary px-1 text-sm text-black/75',
                   border,
+                  'dark:to-secondarydark dark:from-secondarydark dark:text-cyan dark:border-cyan/40 dark:rounded-md',
                 )}
               >
                 {text}
@@ -59,20 +67,32 @@ export default function JobCard(props: Props) {
             <span>
               {t.text(props.start.month)} {props.start.year}
             </span>
-            <div className='my-1 w-[2px] bg-zinc-600' />
+            <div className='dark:bg-cyan my-1 w-[2px] bg-zinc-600' />
             <span>
               {props.end !== undefined
                 ? `${t.text(props.end.month)} ${props.end.year}`
                 : 'Current'}
             </span>
-            <div className='my-1 hidden w-[2px] bg-zinc-600 sm:visible' />
-            <span className={cn('px-1 text-sm italic text-black/75', border)}>
+            <div className='dark:bg-cyan my-1 hidden w-[2px] bg-zinc-600 sm:visible' />
+            <span
+              className={cn(
+                border,
+                'px-1 text-sm italic text-black/75',
+                'dark:to-secondarydark dark:from-secondarydark dark:text-cyan dark:border-cyan/40 dark:rounded-md',
+              )}
+            >
               {props.time} {t.text('app.month.name')}
             </span>
           </div>
         </div>
       </div>
-      <div className={cn('my-2 flex flex-wrap items-center gap-2 p-2', border)}>
+      <div
+        className={cn(
+          'my-2 flex flex-wrap items-center gap-2 p-2',
+          border,
+          'dark:to-secondarydark dark:from-secondarydark dark:text-cyan dark:border-cyan/40 dark:rounded-md',
+        )}
+      >
         <span>Technologies</span>
         {props.technologies.map((src, index) => (
           <picture key={index}>

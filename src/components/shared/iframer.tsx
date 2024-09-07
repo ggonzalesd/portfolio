@@ -56,11 +56,18 @@ export default function IFramer({
   return (
     <div
       className={cn(
-        // styles.InfosTagPdf,
-        'absolute top-14 flex h-5/6 w-9/12 flex-col border-4 bg-zinc-300 shadow-md shadow-black/80',
+        'absolute top-14 flex h-5/6 w-9/12 flex-col border-4',
+        'bg-zinc-300 shadow-md shadow-black/80',
+        'dark:shadow-cyan/40 dark:border-cyan dark:bg-secondarydark/95 dark:rounded-t-xl dark:border-2 dark:shadow-lg dark:backdrop-blur-md',
       )}
     >
-      <div className='flex items-center justify-between bg-gradient-to-r from-primary to-secondary'>
+      <div
+        className={cn(
+          'flex items-center justify-between bg-gradient-to-r',
+          'from-primary to-secondary',
+          'dark:from-primarydark dark:to-secondarydark dark:overflow-hidden dark:rounded-t-xl',
+        )}
+      >
         <span className='px-2'>{frame ? frame.display : '[no-content]'}</span>
         <div className='flex'>
           {redirect && (

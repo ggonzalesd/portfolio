@@ -13,8 +13,12 @@ export default {
       colors: {
         primary: '#fad',
         secondary: '#8af',
+        primarydark: '#165c8a',
+        secondarydark: '#101544',
+        cyan: '#4ff',
       },
     },
   },
   plugins: [],
+  darkMode: 'selector',
 };

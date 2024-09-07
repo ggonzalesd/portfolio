@@ -9,8 +9,10 @@ import Button, { buttonStyleGenerator } from './button';
 import { IoMdArrowRoundForward } from 'react-icons/io';
 import { RiPlanetFill } from 'react-icons/ri';
 import { GoDotFill } from 'react-icons/go';
+import { MdDarkMode, MdLightMode } from 'react-icons/md';
 
 import styles from './header.module.css';
+import { useThemeStore } from '@/store';
 
 const base = import.meta.env.BASE_URL;
 
@@ -24,6 +26,7 @@ export default function Header() {
 
   const [open, setOpen] = useState(false);
   const t = useTypedTranslation();
+  const { dark, switchMode } = useThemeStore();
 
   const currentLang = useMemo(
     () => (t.lang === 'es' ? 'Spanish' : 'English'),
@@ -40,16 +43,22 @@ export default function Header() {
 
   return (
     <header className='fixed left-0 top-0 z-10 h-12 w-full'>
-      <div className='mx-auto flex h-full max-w-screen-lg items-center justify-between border-4 bg-gradient-to-r from-[#8af] to-[#f8d]'>
+      <div
+        className={cn(
+          'mx-auto flex h-full max-w-screen-lg items-center justify-between border-4 bg-gradient-to-r',
+          'border-zinc-100 from-secondary to-primary',
+          'dark:from-secondarydark dark:to-primarydark dark:border-cyan dark:shadow-cyan/20 dark:rounded-t-xl dark:border-2 dark:shadow-xl',
+        )}
+      >
         <Button
           variant='old'
-          className='relative h-full sm:hidden'
+          className='relative h-full rounded-tl-md sm:hidden'
           onClick={() => setOpen((value) => !value)}
         >
           <RiPlanetFill size={24} />
           <nav
             className={cn(
-              'absolute -left-2 top-[calc(100%+4px)] flex flex-col',
+              'dark:bg-secondarydark dark:border-cyan absolute -left-1 top-[calc(100%+4px)] flex flex-col dark:rounded-b-md dark:border-x-2 dark:border-b-2',
               {
                 ['hidden']: !open,
               },
@@ -88,18 +97,23 @@ export default function Header() {
                 ) : (
                   <GoDotFill />
                 )}
-                <span className='text-black'>{t.text(display)}</span>
+                <span>{t.text(display)}</span>
               </a>
             ))}
           </nav>
-          <Button
-            variant='gold'
-            className={cn(styles.Header_LangButton, 'flex items-center')}
-            onClick={changeLang}
-          >
-            <span>{currentLang}</span>
-            <AiOutlineGlobal />
-          </Button>
+          <div className='flex dark:overflow-hidden dark:rounded-tr-md'>
+            <Button
+              variant='gold'
+              className={cn(styles.Header_LangButton, 'flex items-center')}
+              onClick={changeLang}
+            >
+              <span>{currentLang}</span>
+              <AiOutlineGlobal />
+            </Button>
+            <Button variant='gold' onClick={switchMode}>
+              {dark ? <MdDarkMode /> : <MdLightMode />}
+            </Button>
+          </div>
         </div>
       </div>
     </header>

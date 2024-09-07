@@ -42,3 +42,7 @@
     @apply font-montserrat;
   }
 }
+
+* {
+  @apply transition-colors duration-100;
+}
