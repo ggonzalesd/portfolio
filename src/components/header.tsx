@@ -111,10 +111,10 @@ const routers: { path: string; display: LangKey }[] = [
     path: '/',
     display: 'app.header.route-01.display',
   },
-  {
-    path: '/about/',
-    display: 'app.header.route-02.display',
-  },
+  //   {
+  //     path: '/about/',
+  //     display: 'app.header.route-02.display',
+  //   },
   {
     path: '/projects/',
     display: 'app.header.route-03.display',
