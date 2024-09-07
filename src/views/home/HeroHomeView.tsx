@@ -22,7 +22,9 @@ export default function HeroHomeView() {
       <div className='flex items-center justify-center'>
         <picture
           className={cn(
-            'z-[1] flex flex-col border-4 bg-zinc-300 shadow-md shadow-black/40',
+            'z-[1] flex flex-col border-4',
+            'bg-zinc-300 shadow-md shadow-black/40',
+            'dark:bg-secondarydark dark:shadow-cyan/20 dark:overflow-hidden dark:rounded-xl dark:border-2 dark:shadow-lg',
             styles.Home_HeroImage,
           )}
         >
@@ -32,8 +34,9 @@ export default function HeroHomeView() {
           />
           <span
             className={buttonStyleGenerator({
-              variant: 'old',
-              className: 'py-4 text-center text-3xl font-bold leading-8',
+              variant: 'gold',
+              className:
+                'cursor-pointer select-none py-4 text-center text-3xl font-bold leading-8',
             })}
           >
             Grober Gonzales
