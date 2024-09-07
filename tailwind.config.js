@@ -7,6 +7,8 @@ export default {
         pixeloidmono: ['PixeloidMono', 'monospace'],
         pixeloidsans: ['PixeloidSans', 'sans-serif'],
         pixeloidsansbold: ['PixeloidSansBold', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
+        montserratItalic: ['Montserrat-Italic', 'sans-serif'],
       },
       colors: {
         primary: '#fad',

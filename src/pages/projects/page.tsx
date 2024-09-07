@@ -1,10 +1,11 @@
 import AppLayout from '@/layouts/AppLayout';
-import ListProjectsView from '@/views/projects/ListProjectsView';
+// import ListProjectsView from '@/views/projects/ListProjectsView';
 
 export default function ProjectsPage() {
   return (
     <AppLayout>
-      <ListProjectsView />
+      {/* <ListProjectsView /> */}
+      <span className='text-center'>In Dev</span>
     </AppLayout>
   );
 }

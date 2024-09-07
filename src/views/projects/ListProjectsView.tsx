@@ -19,7 +19,7 @@ export default function ListProjectsView() {
               className='flex w-full items-center justify-center'
             >
               <article className='max-w-48 border-4 bg-zinc-300 shadow-black/50 transition-all duration-100 hover:-translate-x-1 hover:-translate-y-1 hover:cursor-pointer hover:shadow-lg'>
-                <div className='flex justify-between bg-gradient-to-r from-primary to-secondary'>
+                <div className='flex items-center justify-between bg-gradient-to-r from-primary to-secondary leading-3'>
                   <h4 className='text-md px-2 text-center'>Unitable</h4>
                   <a
                     href={

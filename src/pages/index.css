@@ -3,6 +3,20 @@
 @tailwind utilities;
 
 @font-face {
+  font-style: italic;
+  font-weight: normal;
+  src: url('/font/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+  font-family: 'Montserrat-Italic';
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  src: url('/font/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-family: 'Montserrat';
+}
+
+@font-face {
   font-style: normal;
   font-weight: normal;
   src: url('/font/PixeloidMono-d94EV.ttf') format('truetype');
@@ -25,6 +39,6 @@
 
 @layer base {
   body {
-    @apply font-pixeloidsans;
+    @apply font-montserrat;
   }
 }
