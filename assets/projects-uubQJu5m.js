@@ -1,1 +1,0 @@
-import{j as e,a as r,d as t,r as o}from"./index-CHKBr5OQ.js";function s(){return e.jsx(r,{children:e.jsx("span",{children:"Projects Page"})})}t(document.getElementById("root")).render(e.jsx(o.StrictMode,{children:e.jsx(s,{})}));
