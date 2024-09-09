@@ -1,1 +1,0 @@
-import{j as e,d as t,e as r,r as o}from"./index-Cup1Jr05.js";function s(){return e.jsx(t,{children:e.jsx("span",{children:"About Page"})})}r(document.getElementById("root")).render(e.jsx(o.StrictMode,{children:e.jsx(s,{})}));

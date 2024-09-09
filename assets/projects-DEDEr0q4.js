@@ -1,1 +1,0 @@
-import{j as e,d as t,e as r,r as s}from"./index-Cup1Jr05.js";function n(){return e.jsx(t,{children:e.jsx("span",{className:"text-center",children:"In Dev"})})}r(document.getElementById("root")).render(e.jsx(s.StrictMode,{children:e.jsx(n,{})}));
