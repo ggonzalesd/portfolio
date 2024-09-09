@@ -22,31 +22,39 @@ import sqlite from './sqlite.png';
 import zustand from './zustand.ico';
 
 const data = {
-  html: { src: html5, display: 'HTML' },
-  css: { src: css3, display: 'CSS' },
-  javascript: { src: javascript, display: 'JavasScript' },
+  html: { src: html5, display: 'HTML', tags: ['frontend'] },
+  css: { src: css3, display: 'CSS', tags: ['frontend'] },
+  javascript: {
+    src: javascript,
+    display: 'JavasScript',
+    tags: ['frontend', 'backend'],
+  },
 
-  nodejs: { src: nodejs, display: 'NodeJS' },
-  npm: { src: npm, display: 'npm' },
-  typescript: { src: typescript, display: 'Typescript' },
-  react: { src: react, display: 'React' },
-  tailwind: { src: tailwind, display: 'Tailwind' },
-  i18n: { src: i18n, display: 'i18next' },
-  redux: { src: redux, display: 'Redux' },
-  zustand: { src: zustand, display: 'Zustand' },
-  express: { src: express, display: 'ExpressJs' },
-  nestjs: { src: nestjs, display: 'NestJs' },
-  emailjs: { src: emailjs, display: 'Emailjs' },
+  nodejs: { src: nodejs, display: 'NodeJS', tags: ['frontend', 'backend'] },
+  npm: { src: npm, display: 'npm', tags: ['frontend', 'backend'] },
+  typescript: {
+    src: typescript,
+    display: 'Typescript',
+    tags: ['frontend', 'backend'],
+  },
+  react: { src: react, display: 'React', tags: ['frontend'] },
+  tailwind: { src: tailwind, display: 'Tailwind', tags: ['frontend'] },
+  i18n: { src: i18n, display: 'i18next', tags: ['frontend'] },
+  redux: { src: redux, display: 'Redux', tags: ['frontend'] },
+  zustand: { src: zustand, display: 'Zustand', tags: ['frontend'] },
+  express: { src: express, display: 'ExpressJs', tags: ['backend'] },
+  nestjs: { src: nestjs, display: 'NestJs', tags: ['backend'] },
+  emailjs: { src: emailjs, display: 'Emailjs', tags: ['frontend'] },
 
-  mui: { src: mui, display: 'Mui' },
+  mui: { src: mui, display: 'Mui', tags: ['frontend'] },
 
-  postgresql: { src: postgresql, display: 'PostgreSQL' },
-  sequelize: { src: sequelize, display: 'Sequelize' },
-  sqlite: { src: sqlite, display: 'SQLite' },
-  typeorm: { src: typeorm, display: 'TypeORM' },
-  java: { src: java, display: 'Java' },
-  springboot: { src: springboot, display: 'Spring Boot' },
-  python: { src: python, display: 'Python' },
+  postgresql: { src: postgresql, display: 'PostgreSQL', tags: ['backend'] },
+  sequelize: { src: sequelize, display: 'Sequelize', tags: ['backend'] },
+  sqlite: { src: sqlite, display: 'SQLite', tags: ['backend'] },
+  typeorm: { src: typeorm, display: 'TypeORM', tags: ['backend'] },
+  java: { src: java, display: 'Java', tags: ['backend'] },
+  springboot: { src: springboot, display: 'Spring Boot', tags: ['backend'] },
+  python: { src: python, display: 'Python', tags: ['backend'] },
 };
 
 export default data;

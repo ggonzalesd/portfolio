@@ -15,8 +15,8 @@ export default function HomePage() {
       <div className='relative w-full'>
         <GridDec className='absolute bottom-0 left-0' />
       </div>
-      <StackHomeView />
       <JobsHomeView />
+      <StackHomeView />
       <EducationView />
     </AppLayout>
   );

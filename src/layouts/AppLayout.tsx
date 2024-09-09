@@ -17,9 +17,9 @@ export default function AppLayout({ children }: Props) {
   const { dark } = useThemeStore();
 
   useEffect(() => {
-    const lang = queries.get('lang') ?? 'en';
+    const lang = queries.get('lang') ?? 'es';
     t.change(lang);
-    queries.set('lang', queries.get('lang') ?? 'en');
+    queries.set('lang', queries.get('lang') ?? 'es');
     history.pushState({}, '', `${window.location.pathname}?${queries}`);
   }, [dark]);
 
