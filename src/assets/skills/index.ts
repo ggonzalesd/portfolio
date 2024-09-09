@@ -20,6 +20,9 @@ import typeorm from './typeorm.png';
 import springboot from './spring-boot.png';
 import sqlite from './sqlite.png';
 import zustand from './zustand.ico';
+import linux from './linux.svg';
+import docker from './docker.svg';
+import git from './git.svg';
 
 const data = {
   html: { src: html5, display: 'HTML', tags: ['frontend'] },
@@ -39,14 +42,14 @@ const data = {
   },
   react: { src: react, display: 'React', tags: ['frontend'] },
   tailwind: { src: tailwind, display: 'Tailwind', tags: ['frontend'] },
-  i18n: { src: i18n, display: 'i18next', tags: ['frontend'] },
+  i18n: { src: i18n, display: 'i18next', tags: ['frontend', 'other'] },
   redux: { src: redux, display: 'Redux', tags: ['frontend'] },
   zustand: { src: zustand, display: 'Zustand', tags: ['frontend'] },
   express: { src: express, display: 'ExpressJs', tags: ['backend'] },
   nestjs: { src: nestjs, display: 'NestJs', tags: ['backend'] },
-  emailjs: { src: emailjs, display: 'Emailjs', tags: ['frontend'] },
+  emailjs: { src: emailjs, display: 'Emailjs', tags: ['frontend', 'other'] },
 
-  mui: { src: mui, display: 'Mui', tags: ['frontend'] },
+  mui: { src: mui, display: 'Mui', tags: ['frontend', 'other'] },
 
   postgresql: { src: postgresql, display: 'PostgreSQL', tags: ['backend'] },
   sequelize: { src: sequelize, display: 'Sequelize', tags: ['backend'] },
@@ -54,7 +57,11 @@ const data = {
   typeorm: { src: typeorm, display: 'TypeORM', tags: ['backend'] },
   java: { src: java, display: 'Java', tags: ['backend'] },
   springboot: { src: springboot, display: 'Spring Boot', tags: ['backend'] },
-  python: { src: python, display: 'Python', tags: ['backend'] },
+  python: { src: python, display: 'Python', tags: ['other'] },
+
+  linux: { src: linux, display: 'Linux', tags: ['other'] },
+  docker: { src: docker, display: 'Docker', tags: ['other'] },
+  git: { src: git, display: 'Git', tags: ['other'] },
 };
 
 export default data;

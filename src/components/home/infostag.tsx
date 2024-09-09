@@ -21,9 +21,9 @@ export default function InfosTag({ Icon, display, value, action }: Props) {
         'dark:rounded-md dark:border-[1px] dark:border-cyan/50 dark:bg-secondarydark',
       )}
     >
-      <Button variant='old'>
+      <div className='px-2 text-black dark:text-cyan'>
         <Icon size={24} />
-      </Button>
+      </div>
       <span className='flex-grow px-2 text-blue-700 dark:text-blue-400'>
         {display}
       </span>
@@ -31,15 +31,14 @@ export default function InfosTag({ Icon, display, value, action }: Props) {
         <Button
           disabled={navigator.clipboard === undefined}
           variant='gold'
-          onClick={() =>
-            navigator.clipboard
-              .writeText(value)
-              .then((response) => {
-                console.log(response);
-              })
-              .catch((error) => {
-                console.error(error);
-              })
+          onClick={
+            () => navigator.clipboard.writeText(value)
+            // .then((response) => {
+            //   console.log(response);
+            // })
+            // .catch((error) => {
+            //   console.error(error);
+            // })
           }
         >
           <FaCopy size={24} />

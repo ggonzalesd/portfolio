@@ -16,7 +16,7 @@ export default function Window({ title, children }: Props) {
           'dark:rounded-t-xl dark:from-secondarydark dark:to-primarydark',
         )}
       >
-        <span className='px-2'>{title}</span>
+        <h2 className='px-2'>{title}</h2>
         <Button disabled className='dark:rounded-tr-lg'>
           X
         </Button>

@@ -2,7 +2,6 @@ import { useCallback, useMemo, useState } from 'react';
 import cn from 'classnames';
 import { LangKey } from '@/locale/en';
 import { useTypedTranslation } from '@/hooks';
-import { AiOutlineGlobal } from 'react-icons/ai';
 
 import Button, { buttonStyleGenerator } from './button';
 
@@ -10,6 +9,9 @@ import { IoMdArrowRoundForward } from 'react-icons/io';
 import { RiPlanetFill } from 'react-icons/ri';
 import { GoDotFill } from 'react-icons/go';
 import { MdDarkMode, MdLightMode } from 'react-icons/md';
+
+import flagEs from '@/assets/flags/es.svg';
+import flagEn from '@/assets/flags/us.svg';
 
 import styles from './header.module.css';
 import { useThemeStore } from '@/store';
@@ -78,42 +80,45 @@ export default function Header() {
             ))}
           </nav>
         </Button>
-        <span className='hidden px-2 text-white sm:inline-block'>
-          FullStack
+        <span className='hidden px-2 font-bold text-black sm:inline-block dark:text-white'>
+          {t.text('app.header.title')}
         </span>
-        <div className='flex h-full'>
-          <nav className='hidden h-full items-center sm:flex'>
-            {routers.map(({ path, display }) => (
-              <a
-                key={path}
-                href={base + path + `?lang=${lang}`}
-                className={buttonStyleGenerator({
-                  variant: 'old',
-                  className: 'flex h-full items-center gap-2',
-                })}
-              >
-                {isPathActive(base + path) ? (
-                  <IoMdArrowRoundForward />
-                ) : (
-                  <GoDotFill />
-                )}
-                <span>{t.text(display)}</span>
-              </a>
-            ))}
-          </nav>
-          <div className='flex dark:overflow-hidden dark:rounded-tr-md'>
-            <Button
-              variant='gold'
-              className={cn(styles.Header_LangButton, 'flex items-center')}
-              onClick={changeLang}
+        <nav className='hidden h-full items-center sm:flex'>
+          {routers.map(({ path, display }) => (
+            <a
+              key={path}
+              href={base + path + `?lang=${lang}`}
+              className={buttonStyleGenerator({
+                variant: 'old',
+                className: 'flex h-full items-center gap-2',
+              })}
             >
-              <span>{currentLang}</span>
-              <AiOutlineGlobal />
-            </Button>
-            <Button variant='gold' onClick={switchMode}>
-              {dark ? <MdDarkMode /> : <MdLightMode />}
-            </Button>
-          </div>
+              {isPathActive(base + path) ? (
+                <IoMdArrowRoundForward />
+              ) : (
+                <GoDotFill />
+              )}
+              <span>{t.text(display)}</span>
+            </a>
+          ))}
+        </nav>
+        <div className='flex h-full dark:overflow-hidden dark:rounded-tr-md'>
+          <Button
+            variant='gold'
+            className={cn(styles.Header_LangButton, 'flex items-center gap-1')}
+            onClick={changeLang}
+          >
+            <span>{currentLang}</span>
+            <div
+              className='h-6 w-6 rounded-sm bg-cover bg-center'
+              style={{
+                backgroundImage: `url(${currentLang === 'Spanish' ? flagEs : flagEn})`,
+              }}
+            />
+          </Button>
+          <Button variant='gold' className='px-3' onClick={switchMode}>
+            {dark ? <MdDarkMode /> : <MdLightMode />}
+          </Button>
         </div>
       </div>
     </header>

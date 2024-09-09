@@ -6,7 +6,7 @@ export default function ListProjectsView() {
   const queries = new URLSearchParams(window.location.search);
   const projectId = queries.get('id');
 
-  console.log(queries.get('id'));
+  // console.log(queries.get('id'));
 
   return (
     <Section>

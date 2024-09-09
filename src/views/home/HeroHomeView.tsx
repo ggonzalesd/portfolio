@@ -15,6 +15,7 @@ import images from '@/assets/photos';
 import styles from './Home.module.css';
 
 import plane from '@/assets/decorations/palm.svg';
+import GridDec from '@/components/shared/GridDec';
 
 export default function HeroHomeView() {
   const t = useTypedTranslation();
@@ -24,9 +25,14 @@ export default function HeroHomeView() {
       before={
         <div className='relative mx-auto w-full max-w-screen-lg'>
           <div
-            className='absolute right-0 h-96 w-96 bg-cover bg-center opacity-20'
+            className='absolute right-0 top-96 h-96 w-96 bg-cover bg-center opacity-10 sm:top-0'
             style={{ backgroundImage: `url(${plane})` }}
           />
+        </div>
+      }
+      after={
+        <div className='relative mx-auto w-full max-w-screen-lg'>
+          <GridDec className='absolute bottom-0 left-0' />
         </div>
       }
       className='grid grid-cols-1 gap-4 py-2 sm:grid-cols-2'
@@ -60,9 +66,9 @@ export default function HeroHomeView() {
 
       <div className='z-[1] flex flex-col items-center justify-center sm:items-start'>
         <div className='px-6 sm:px-0'>
-          <h2 className='text-center text-xl sm:text-start'>
+          <h1 className='text-center text-xl sm:text-start'>
             {t.text('home.hero.description.title')}
-          </h2>
+          </h1>
           <p className='text-xs leading-6'>
             {t.text('home.hero.description.content')}
           </p>

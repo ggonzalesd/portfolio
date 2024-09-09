@@ -58,14 +58,14 @@ export default function IFramer({
       className={cn(
         'absolute top-14 flex h-5/6 w-9/12 flex-col border-4',
         'bg-zinc-300 shadow-md shadow-black/80',
-        'dark:shadow-cyan/40 dark:border-cyan dark:bg-secondarydark/95 dark:rounded-t-xl dark:border-2 dark:shadow-lg dark:backdrop-blur-md',
+        'dark:rounded-t-xl dark:border-[1px] dark:border-cyan/50 dark:bg-secondarydark/95 dark:shadow-lg dark:shadow-cyan/40 dark:backdrop-blur-md',
       )}
     >
       <div
         className={cn(
           'flex items-center justify-between bg-gradient-to-r',
           'from-primary to-secondary',
-          'dark:from-primarydark dark:to-secondarydark dark:overflow-hidden dark:rounded-t-xl',
+          'dark:overflow-hidden dark:rounded-t-xl dark:from-primarydark dark:to-secondarydark',
         )}
       >
         <span className='px-2'>{frame ? frame.display : '[no-content]'}</span>
@@ -110,8 +110,16 @@ export default function IFramer({
       )}
       {status === 'LOADING' && <Loading />}
       {status === 'ERROR' && (
-        <Error>
+        <Error className='flex flex-col items-center justify-center py-2'>
           <span>Try to Download '{frame?.display}'</span>
+          <Button
+            variant='old'
+            className='flex items-center gap-2'
+            onClick={onDownload}
+          >
+            <MdDownload />
+            <span>{t.text('app.iframer.download')}</span>
+          </Button>
         </Error>
       )}
       <iframe

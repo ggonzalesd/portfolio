@@ -17,9 +17,10 @@ export default function JobsHomeView() {
       <Window title={t.text('home.experience.title')}>
         <div
           className={cn(
-            'flex flex-col gap-4 p-2',
-            'bg-zinc-300',
-            'dark:bg-gradient-to-br dark:from-secondarydark dark:to-primarydark',
+            'flex flex-col gap-4 bg-gradient-to-br p-2',
+            'from-zinc-300 to-zinc-200',
+
+            'dark:from-secondarydark/20 dark:to-primarydark/20',
           )}
         >
           <Suspense fallback={<Loading />}>
