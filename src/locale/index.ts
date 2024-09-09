@@ -19,7 +19,7 @@ i18n.use(initReactI18next).init({
     escapeValue: false,
   },
   debug: import.meta.env.DEV,
-  fallbackLng: 'en',
+  fallbackLng: 'es',
 });
 
 export const languagesList = Object.keys(resources);

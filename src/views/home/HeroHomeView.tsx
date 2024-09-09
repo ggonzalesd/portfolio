@@ -14,22 +14,35 @@ import { FaFilePdf } from 'react-icons/fa';
 import images from '@/assets/photos';
 import styles from './Home.module.css';
 
+import plane from '@/assets/decorations/palm.svg';
+
 export default function HeroHomeView() {
   const t = useTypedTranslation();
 
   return (
-    <Section className='grid grid-cols-1 gap-4 py-2 sm:grid-cols-2'>
+    <Section
+      before={
+        <div className='relative mx-auto w-full max-w-screen-lg'>
+          <div
+            className='absolute right-0 h-96 w-96 bg-cover bg-center opacity-20'
+            style={{ backgroundImage: `url(${plane})` }}
+          />
+        </div>
+      }
+      className='grid grid-cols-1 gap-4 py-2 sm:grid-cols-2'
+    >
       <div className='flex items-center justify-center'>
         <picture
           className={cn(
             'z-[1] flex flex-col border-4',
             'bg-zinc-300 shadow-md shadow-black/40',
-            'dark:bg-secondarydark dark:shadow-cyan/20 dark:overflow-hidden dark:rounded-xl dark:border-2 dark:shadow-lg',
+            'dark:overflow-hidden dark:rounded-lg dark:border-[1px] dark:border-cyan/50 dark:bg-secondarydark dark:shadow-lg dark:shadow-cyan/20',
             styles.Home_HeroImage,
           )}
         >
           <img
-            src={images.profile}
+            src={images.photo01}
+            alt='Grober Erickson Gonzales De La Cruz'
             className='aspect-square h-auto w-80 object-cover object-center'
           />
           <span
@@ -50,11 +63,11 @@ export default function HeroHomeView() {
           <h2 className='text-center text-xl sm:text-start'>
             {t.text('home.hero.description.title')}
           </h2>
-          <p className='text-xs leading-6 backdrop-blur-[1px]'>
+          <p className='text-xs leading-6'>
             {t.text('home.hero.description.content')}
           </p>
         </div>
-        <div className='my-2 flex flex-col gap-2'>
+        <div className='my-2 flex w-full flex-col gap-2'>
           {tags.map(({ icon, action, display, value }) => (
             <InfosTag
               key={value}
@@ -74,7 +87,7 @@ const tags: {
   icon: IconType;
   display: string;
   value: string;
-  action: 'LINK' | 'COPY' | 'EMBED';
+  action: 'LINK' | 'COPY';
 }[] = [
   {
     icon: MdMail,
@@ -104,6 +117,6 @@ const tags: {
     icon: FaFilePdf,
     display: 'Curriculum Vitae',
     value: import.meta.env.BASE_URL + '/download/fullstack-grober_gonzales.pdf',
-    action: 'EMBED',
+    action: 'LINK',
   },
 ];

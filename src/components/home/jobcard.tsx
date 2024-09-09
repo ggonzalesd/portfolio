@@ -31,17 +31,18 @@ export default function JobCard(props: Props) {
       className={cn(
         'flex flex-col border-[1px] p-2',
         'border-black/25',
-        'dark:border-cyan/40 dark:bg-primarydark/30 dark:rounded-md',
+        'dark:rounded-md dark:border-cyan/40 dark:bg-primarydark/30',
       )}
     >
       <div className='flex gap-2'>
         <picture className='hidden sm:flex'>
           <img
             src={props.src}
+            alt={props.name}
             className={cn(
               'aspect-square h-24 w-24 border-t-2 object-contain',
               border,
-              'dark:border-cyan/70 dark:rounded-md',
+              'dark:rounded-md dark:border-cyan/70',
             )}
           />
         </picture>
@@ -53,7 +54,7 @@ export default function JobCard(props: Props) {
                 className={cn(
                   'bg-gradient-to-r from-secondary to-primary px-1 text-sm text-black/75',
                   border,
-                  'dark:to-secondarydark dark:from-secondarydark dark:text-cyan dark:border-cyan/40 dark:rounded-md',
+                  'dark:rounded-md dark:border-cyan/40 dark:from-secondarydark dark:to-secondarydark dark:text-cyan',
                 )}
               >
                 {text}
@@ -67,18 +68,18 @@ export default function JobCard(props: Props) {
             <span>
               {t.text(props.start.month)} {props.start.year}
             </span>
-            <div className='dark:bg-cyan my-1 w-[2px] bg-zinc-600' />
+            <div className='my-1 w-[2px] bg-zinc-600 dark:bg-cyan' />
             <span>
               {props.end !== undefined
                 ? `${t.text(props.end.month)} ${props.end.year}`
                 : 'Current'}
             </span>
-            <div className='dark:bg-cyan my-1 hidden w-[2px] bg-zinc-600 sm:visible' />
+            <div className='my-1 hidden w-[2px] bg-zinc-600 sm:visible dark:bg-cyan' />
             <span
               className={cn(
                 border,
                 'px-1 text-sm italic text-black/75',
-                'dark:to-secondarydark dark:from-secondarydark dark:text-cyan dark:border-cyan/40 dark:rounded-md',
+                'dark:rounded-md dark:border-cyan/40 dark:from-secondarydark dark:to-secondarydark dark:text-cyan',
               )}
             >
               {props.time} {t.text('app.month.name')}
@@ -90,7 +91,7 @@ export default function JobCard(props: Props) {
         className={cn(
           'my-2 flex flex-wrap items-center gap-2 p-2',
           border,
-          'dark:to-secondarydark dark:from-secondarydark dark:text-cyan dark:border-cyan/40 dark:rounded-md',
+          'dark:rounded-md dark:border-cyan/40 dark:from-secondarydark dark:to-secondarydark dark:text-cyan',
         )}
       >
         <span>Technologies</span>

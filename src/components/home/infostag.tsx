@@ -1,12 +1,9 @@
-import { useState } from 'react';
 import { IconType } from 'react-icons';
 import cn from 'classnames';
 
-import IFramer from '../shared/iframer';
 import Button, { buttonStyleGenerator } from '../button';
 
 import { FaCopy, FaExternalLinkAlt } from 'react-icons/fa';
-import { GrView } from 'react-icons/gr';
 
 interface Props {
   Icon: IconType;
@@ -16,14 +13,12 @@ interface Props {
 }
 
 export default function InfosTag({ Icon, display, value, action }: Props) {
-  const [open, setOpen] = useState(false);
-
   return (
     <div
       className={cn(
         'flex items-center',
         'bg-zinc-300',
-        'dark:bg-secondarydark dark:border-cyan dark:rounded-md dark:border-2',
+        'dark:rounded-md dark:border-[1px] dark:border-cyan/50 dark:bg-secondarydark',
       )}
     >
       <Button variant='old'>
@@ -59,22 +54,6 @@ export default function InfosTag({ Icon, display, value, action }: Props) {
         >
           <FaExternalLinkAlt size={24} />
         </a>
-      )}
-
-      {action === 'EMBED' && (
-        <Button variant='gold' onClick={() => setOpen(true)}>
-          <GrView size={24} />
-        </Button>
-      )}
-      {action === 'EMBED' && open && (
-        <section className='fixed left-0 top-0 z-20 flex h-full w-full justify-center'>
-          <IFramer
-            redirect={true}
-            download={true}
-            frames={[{ display, value }]}
-            setOpen={setOpen}
-          />
-        </section>
       )}
     </div>
   );

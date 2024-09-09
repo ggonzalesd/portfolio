@@ -47,7 +47,7 @@ export default function Header() {
         className={cn(
           'mx-auto flex h-full max-w-screen-lg items-center justify-between border-4 bg-gradient-to-r',
           'border-zinc-100 from-secondary to-primary',
-          'dark:from-secondarydark dark:to-primarydark dark:border-cyan dark:shadow-cyan/20 dark:rounded-t-xl dark:border-2 dark:shadow-xl',
+          'dark:rounded-t-xl dark:border-[1px] dark:border-cyan/50 dark:from-secondarydark dark:to-primarydark dark:shadow-xl dark:shadow-cyan/20',
         )}
       >
         <Button
@@ -58,7 +58,7 @@ export default function Header() {
           <RiPlanetFill size={24} />
           <nav
             className={cn(
-              'dark:bg-secondarydark dark:border-cyan absolute -left-1 top-[calc(100%+4px)] flex flex-col dark:rounded-b-md dark:border-x-2 dark:border-b-2',
+              'absolute -left-1 top-[calc(100%+4px)] flex flex-col dark:rounded-b-md dark:border-x-2 dark:border-b-2 dark:border-cyan dark:bg-secondarydark',
               {
                 ['hidden']: !open,
               },
