@@ -21,7 +21,7 @@ export default function AppLayout({ children }: Props) {
     t.change(lang);
     queries.set('lang', queries.get('lang') ?? 'es');
     history.pushState({}, '', `${window.location.pathname}?${queries}`);
-  }, [dark]);
+  }, []);
 
   return (
     <div

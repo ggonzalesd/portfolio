@@ -23,6 +23,8 @@ import zustand from './zustand.ico';
 import linux from './linux.svg';
 import docker from './docker.svg';
 import git from './git.svg';
+import torch from './torch.png';
+import jupyter from './jupyter-notebook.png';
 
 const data = {
   html: { src: html5, display: 'HTML', tags: ['frontend'] },
@@ -58,6 +60,8 @@ const data = {
   java: { src: java, display: 'Java', tags: ['backend'] },
   springboot: { src: springboot, display: 'Spring Boot', tags: ['backend'] },
   python: { src: python, display: 'Python', tags: ['other'] },
+  torch: { src: torch, display: 'PyTorch', tags: ['other'] },
+  jupyter: { src: jupyter, display: 'Jupyter', tags: ['other'] },
 
   linux: { src: linux, display: 'Linux', tags: ['other'] },
   docker: { src: docker, display: 'Docker', tags: ['other'] },

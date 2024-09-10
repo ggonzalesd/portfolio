@@ -49,7 +49,7 @@ export default function Header() {
         className={cn(
           'mx-auto flex h-full max-w-screen-lg items-center justify-between border-4 bg-gradient-to-r',
           'border-zinc-100 from-secondary to-primary',
-          'dark:rounded-t-xl dark:border-[1px] dark:border-cyan/50 dark:from-secondarydark dark:to-primarydark dark:shadow-xl dark:shadow-cyan/20',
+          'dark:rounded-t-xl dark:border-[1px] dark:border-cyan/50 dark:from-secondarydark dark:to-primarydark dark:shadow-xl dark:shadow-cyan/10',
         )}
       >
         <Button
@@ -80,7 +80,7 @@ export default function Header() {
             ))}
           </nav>
         </Button>
-        <span className='hidden px-2 font-bold text-black sm:inline-block dark:text-white'>
+        <span className='hidden px-2 font-bold text-black dark:text-white'>
           {t.text('app.header.title')}
         </span>
         <nav className='hidden h-full items-center sm:flex'>

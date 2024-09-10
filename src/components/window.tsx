@@ -4,11 +4,18 @@ import Button from './button';
 interface Props {
   title: string;
   children?: React.ReactNode;
+  className?: string;
+  hideCloseButton?: boolean;
 }
 
-export default function Window({ title, children }: Props) {
+export default function Window({ title, children, hideCloseButton }: Props) {
   return (
-    <div className='border-4 dark:rounded-t-xl dark:border-[1px] dark:border-cyan/50'>
+    <div
+      className={cn(
+        'border-4 dark:rounded-t-xl dark:border-[1px] dark:border-cyan/50',
+        children,
+      )}
+    >
       <div
         className={cn(
           'flex w-full items-center justify-between bg-gradient-to-r',
@@ -17,9 +24,11 @@ export default function Window({ title, children }: Props) {
         )}
       >
         <h2 className='px-2'>{title}</h2>
-        <Button disabled className='dark:rounded-tr-lg'>
-          X
-        </Button>
+        {!hideCloseButton && (
+          <Button disabled className='dark:rounded-tr-lg'>
+            X
+          </Button>
+        )}
       </div>
       {children}
     </div>

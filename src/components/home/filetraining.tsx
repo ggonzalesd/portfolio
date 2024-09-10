@@ -36,8 +36,8 @@ export default function FileTraining({
     <>
       <button
         className={cn(
-          { ['dark:border-cyan border-yellow-200']: active },
-          'flex flex-col items-center border-4 border-transparent hover:cursor-pointer hover:border-white active:bg-sky-400/50',
+          { ['border-yellow-200 dark:border-cyan']: active },
+          'z-10 flex flex-col items-center border-4 border-transparent hover:cursor-pointer hover:border-white active:bg-sky-400/50',
           'dark:rounded-lg dark:border-2',
         )}
         onClick={() => {
@@ -48,11 +48,12 @@ export default function FileTraining({
         <picture className='relative flex flex-col items-center justify-center'>
           <img
             src={src}
+            alt={name}
             className='absolute aspect-square h-auto w-12 rounded-full bg-white object-cover p-2'
           />
           <PiFolderOpenFill
             size={96}
-            className='dark:text-cyan/50 text-[#e8d]'
+            className='text-[#e8d] dark:text-cyan/50'
           />
           <div className='absolute bottom-0 right-0 flex gap-[2px]'>
             {icons &&
@@ -69,7 +70,7 @@ export default function FileTraining({
         <span className='select-none text-wrap text-center text-xs hover:underline'>
           {name}
         </span>
-        <span className='dark:text-cyan select-none text-xs italic text-zinc-700'>
+        <span className='select-none text-xs italic text-zinc-700 dark:text-cyan'>
           {month} {year}
         </span>
       </button>

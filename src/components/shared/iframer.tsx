@@ -10,6 +10,8 @@ import Error from './error';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import { MdDownload } from 'react-icons/md';
 
+import styles from './iframer.module.css';
+
 interface Props {
   frames: {
     display: string;
@@ -59,6 +61,7 @@ export default function IFramer({
         'absolute top-14 flex h-5/6 w-9/12 flex-col border-4',
         'bg-zinc-300 shadow-md shadow-black/80',
         'dark:rounded-t-xl dark:border-[1px] dark:border-cyan/50 dark:bg-secondarydark/95 dark:shadow-lg dark:shadow-cyan/40 dark:backdrop-blur-md',
+        styles.IFramer,
       )}
     >
       <div

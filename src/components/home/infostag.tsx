@@ -1,18 +1,16 @@
 import { IconType } from 'react-icons';
 import cn from 'classnames';
 
-import Button, { buttonStyleGenerator } from '../button';
-
-import { FaCopy, FaExternalLinkAlt } from 'react-icons/fa';
+import Button from '../button';
+import { FaCopy } from 'react-icons/fa';
 
 interface Props {
   Icon: IconType;
   value: string;
   display: string;
-  action: 'COPY' | 'LINK' | 'EMBED';
 }
 
-export default function InfosTag({ Icon, display, value, action }: Props) {
+export default function InfosTag({ Icon, display, value }: Props) {
   return (
     <div
       className={cn(
@@ -27,33 +25,21 @@ export default function InfosTag({ Icon, display, value, action }: Props) {
       <span className='flex-grow px-2 text-blue-700 dark:text-blue-400'>
         {display}
       </span>
-      {action === 'COPY' && (
-        <Button
-          disabled={navigator.clipboard === undefined}
-          variant='gold'
-          onClick={
-            () => navigator.clipboard.writeText(value)
-            // .then((response) => {
-            //   console.log(response);
-            // })
-            // .catch((error) => {
-            //   console.error(error);
-            // })
-          }
-        >
-          <FaCopy size={24} />
-        </Button>
-      )}
-
-      {action === 'LINK' && (
-        <a
-          href={value}
-          target='_blank'
-          className={buttonStyleGenerator({ variant: 'gold' })}
-        >
-          <FaExternalLinkAlt size={24} />
-        </a>
-      )}
+      <Button
+        disabled={navigator.clipboard === undefined}
+        variant='gold'
+        onClick={
+          () => navigator.clipboard.writeText(value)
+          // .then((response) => {
+          //   console.log(response);
+          // })
+          // .catch((error) => {
+          //   console.error(error);
+          // })
+        }
+      >
+        <FaCopy size={24} />
+      </Button>
     </div>
   );
 }

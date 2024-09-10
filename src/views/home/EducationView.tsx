@@ -19,7 +19,7 @@ export default function EducationView() {
       before={
         <div className='relative mx-auto w-full max-w-screen-lg'>
           <div
-            className='absolute left-0 top-0 h-96 w-96 bg-cover bg-center opacity-10'
+            className='absolute left-0 top-0 z-0 h-96 w-96 bg-cover bg-center opacity-10'
             style={{ backgroundImage: `url(${plane})` }}
           />
         </div>
