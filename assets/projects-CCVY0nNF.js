@@ -1,1 +1,0 @@
-import{j as e,A as t,a as r,r as s}from"./index-B2vjjv14.js";function n(){return e.jsx(t,{children:e.jsx("span",{className:"text-center",children:"In Dev"})})}r(document.getElementById("root")).render(e.jsx(s.StrictMode,{children:e.jsx(n,{})}));
