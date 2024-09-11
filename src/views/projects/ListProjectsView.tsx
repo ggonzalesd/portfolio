@@ -9,6 +9,7 @@ import { useTypedTranslation } from '@/hooks';
 
 import springboot from '@/assets/thumbnails/spring-boot.png';
 import diffusionflower from '@/assets/thumbnails/diffusion-flower.png';
+import cyberpunk from '@/assets/thumbnails/cyberpunk-icons.png';
 
 import skills from '@/assets/skills';
 
@@ -45,7 +46,7 @@ export default function ListProjectsView() {
 }
 
 const projects: {
-  title: 'Frontend' | 'Backend' | 'Data Science';
+  title: 'Frontend' | 'Backend' | 'Data Science' | 'Other';
   src: string;
   name: LangKey;
   texts: LangKey[];
@@ -81,6 +82,23 @@ const projects: {
     releases: [
       {
         src: 'https://github.com/ggonzalesd/diffusion-flowers',
+        display: 'Github',
+        Icon: BsGithub,
+      },
+    ],
+  },
+  {
+    title: 'Other',
+    src: cyberpunk,
+    name: 'project.p003-cyberpunkicon.name',
+    tags: [skills.vscode, skills.npm, skills.nodejs],
+    texts: [
+      'project.p003-cyberpunkicon.text.01',
+      'project.p003-cyberpunkicon.text.02',
+    ],
+    releases: [
+      {
+        src: 'https://github.com/ggonzalesd/cyberpunk-vscode-icon',
         display: 'Github',
         Icon: BsGithub,
       },

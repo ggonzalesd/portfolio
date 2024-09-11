@@ -5,13 +5,18 @@ const esProjectLang: typeof enProjectLang = {
   'project.p001-unitableapi.text.01':
     'API REST con Spring Boot, JWT y PostgreSQL para el curso de Desarrollo Web.',
   'project.p001-unitableapi.text.02':
-    'Para el desarrollo se utilizaron algunas herramientas como JPA para modelar la base de datos y lombok.',
+    'Developed with tools such as JPA to model the database and lombok.',
 
   'project.p002-diffusionflower.name': 'Diffusion Flower',
   'project.p002-diffusionflower.text.01':
-    'IA Generativa basada en Modelos Diffusos de flores en base a ruido y a un mapa blanco y negro.',
+    'IA Generativa basada en Modelos Diffusos para crear imágenes de flores en base a ruido y a mapas blanco y negro.',
   'project.p002-diffusionflower.text.02':
     'Desarrollado con python, pytorch y Jupyter Notebooks.',
+
+  'project.p003-cyberpunkicon.name': 'Cyberpunk Vscode Icon',
+  'project.p003-cyberpunkicon.text.01':
+    'Tema de iconos para Visual Code que utiliza recursos de terceros y propios.',
+  'project.p003-cyberpunkicon.text.02': 'Desarrollado para temas oscuros.',
 };
 
 export default esProjectLang;

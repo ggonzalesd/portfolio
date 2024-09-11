@@ -7,7 +7,12 @@ export default {
 
   'project.p002-diffusionflower.name': 'Diffusion Flower',
   'project.p002-diffusionflower.text.01':
-    'Generative AI based on Fuzzy Models of flowers based on noise and a black and white map.',
+    'Generative AI based on Diffusion Models to create flower images based on noise and black and white maps.',
   'project.p002-diffusionflower.text.02':
     'Developed with python, pytorch and Jupyter Notebooks.',
+
+  'project.p003-cyberpunkicon.name': 'Cyberpunk Vscode Icon',
+  'project.p003-cyberpunkicon.text.01':
+    'Icon theme for Visual Code that uses third-party and proprietary resources.',
+  'project.p003-cyberpunkicon.text.02': 'Developed for dark themes.',
 };

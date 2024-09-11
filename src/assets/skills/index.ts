@@ -25,6 +25,8 @@ import docker from './docker.svg';
 import git from './git.svg';
 import torch from './torch.png';
 import jupyter from './jupyter-notebook.png';
+import vscode from './vscode.png';
+import cpp from './cpp.png';
 
 const data = {
   html: { src: html5, display: 'HTML', tags: ['frontend'] },
@@ -63,9 +65,11 @@ const data = {
   torch: { src: torch, display: 'PyTorch', tags: ['other'] },
   jupyter: { src: jupyter, display: 'Jupyter', tags: ['other'] },
 
+  vscode: { src: vscode, display: 'Vscode', tags: ['other'] },
   linux: { src: linux, display: 'Linux', tags: ['other'] },
   docker: { src: docker, display: 'Docker', tags: ['other'] },
   git: { src: git, display: 'Git', tags: ['other'] },
+  cpp: { src: cpp, display: 'C++', tags: ['other'] },
 };
 
 export default data;

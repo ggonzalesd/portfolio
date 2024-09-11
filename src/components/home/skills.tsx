@@ -9,7 +9,7 @@ const tags = ['all', 'frontend', 'backend', 'other'];
 
 export default function Skills() {
   const [slide, setSlide] = useState(false);
-  const [tag, setTag] = useState('all');
+  const [tag, setTag] = useState('frontend');
 
   const filterCallback = useCallback(
     (currentTags: string[]) => {

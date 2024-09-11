@@ -21,7 +21,7 @@ export default function ProjectCard(props: Props) {
         <div className='flex'>
           <picture
             className={cn(
-              'max-w-[50%] overflow-hidden bg-gradient-to-tl',
+              'w-[50%] overflow-hidden bg-gradient-to-tl',
               'from-zinc-200 to-zinc-300',
               'dark:from-primarydark dark:to-secondarydark',
             )}
@@ -29,7 +29,7 @@ export default function ProjectCard(props: Props) {
             <img
               src={props.src}
               alt={`${props.name} thumbnail`}
-              className='duration-400 aspect-square h-full w-auto object-contain object-center transition-all hover:scale-110 hover:cursor-pointer'
+              className='aspect-square h-full w-auto object-contain object-center transition-all duration-1000 hover:rotate-2 hover:scale-110 hover:cursor-pointer'
             />
           </picture>
           <div className='w-full bg-zinc-300 p-2 dark:bg-primarydark/50'>
