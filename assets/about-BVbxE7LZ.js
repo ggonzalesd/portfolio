@@ -1,0 +1,1 @@
+import{j as t,A as e,a as r,r as o}from"./index-CnC8IKye.js";function s(){return t.jsx(e,{children:t.jsx("span",{children:"About Page"})})}r(document.getElementById("root")).render(t.jsx(o.StrictMode,{children:t.jsx(s,{})}));
