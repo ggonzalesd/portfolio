@@ -15,4 +15,10 @@ export default {
   'project.p003-cyberpunkicon.text.01':
     'Icon theme for Visual Code that uses third-party and proprietary resources.',
   'project.p003-cyberpunkicon.text.02': 'Developed for dark themes.',
+
+  'project.p004-simpleui.name': 'SimpleUI',
+  'project.p004-simpleui.text.01':
+    'SimpleUI is a component library designed to streamline UI development. ',
+  'project.p004-simpleui.text.02':
+    'The library is designed to work seamlessly with Vite and React.',
 };

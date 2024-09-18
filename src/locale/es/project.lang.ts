@@ -17,6 +17,12 @@ const esProjectLang: typeof enProjectLang = {
   'project.p003-cyberpunkicon.text.01':
     'Tema de iconos para Visual Code que utiliza recursos de terceros y propios.',
   'project.p003-cyberpunkicon.text.02': 'Desarrollado para temas oscuros.',
+
+  'project.p004-simpleui.name': 'SimpleUI',
+  'project.p004-simpleui.text.01':
+    'SimpleUI es una biblioteca de componentes diseñada para optimizar el desarrollo de la interfaz de usuario.',
+  'project.p004-simpleui.text.02':
+    'La biblioteca está diseñada para funcionar sin problemas con Vite y React.',
 };
 
 export default esProjectLang;

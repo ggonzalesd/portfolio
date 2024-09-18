@@ -4,12 +4,15 @@ import ProjectCard from '@/components/projects/projectcard';
 
 import { BsGithub } from 'react-icons/bs';
 import { IconType } from 'react-icons';
+import { GrDeploy } from 'react-icons/gr';
+
 import { LangKey } from '@/locale/en';
 import { useTypedTranslation } from '@/hooks';
 
 import springboot from '@/assets/thumbnails/spring-boot.png';
 import diffusionflower from '@/assets/thumbnails/diffusion-flower.png';
 import cyberpunk from '@/assets/thumbnails/cyberpunk-icons.png';
+import simpleui from '@/assets/thumbnails/SimpleUI.png';
 
 import skills from '@/assets/skills';
 
@@ -53,6 +56,25 @@ const projects: {
   tags: { src: string; display: string }[];
   releases: { src: string; Icon: IconType; display: string }[];
 }[] = [
+  {
+    title: 'Frontend',
+    src: simpleui,
+    name: 'project.p004-simpleui.name',
+    tags: [skills.typescript, skills.react, skills.zustand, skills.tailwind],
+    texts: ['project.p004-simpleui.text.01', 'project.p004-simpleui.text.02'],
+    releases: [
+      {
+        src: 'https://ggonzalesd.github.io/SimpleUI',
+        display: 'Website',
+        Icon: GrDeploy,
+      },
+      {
+        src: 'https://github.com/ggonzalesd/SimpleUI',
+        display: 'Github',
+        Icon: BsGithub,
+      },
+    ],
+  },
   {
     title: 'Backend',
     src: springboot,
